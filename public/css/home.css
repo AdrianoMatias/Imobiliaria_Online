@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Noto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+    word-spacing: .0625em;
+}
+
+body {
+    background-color: #31363f;
+}
+
+#btnCard{
+    margin-top: 10px;
+}
+
+.container-header>* {
+    position: relative;
+}
+
+.container-header {
+    background-image: url('../img/beach_yoga_desktop.webp');
+    position: relative;
+    width: 100%;
+    min-height: 22.5rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    display: flex;
+    align-items: initial;
+    align-items: center;
+    flex-direction: column;
+}
+
+.overlay {
+    background: linear-gradient( 0deg, #101010fc 0%, rgba(0, 0, 0, .4) 15%, rgba(0, 0, 0, .4) 90%, rgba(0, 0, 0, .8) 100%);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.arrow {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 100%;
+    left: 50%;
+    pointer-events: none;
+    border: 1.875rem solid rgba(0, 0, 0, 0);
+    background: transparent;
+    border-top-color: #101010;
+    margin-left: -1.875rem;
+}
+
+header.header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 80%;
+    padding: 1rem;
+    height: 126px;
+}
+
+.logo {
+    display: flex;
+    position: relative;
+    grid-area: logo;
+    background-image: url(./../img/logo3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20%;
+    justify-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.container-home {
+    margin: 2em auto;
+    text-align: center;
+    max-width: 70em;
+    padding-left: 1em;
+    padding-right: .5em;
+    width: 100%;
+}
+
+.container-home h1 {
+    margin-bottom: 0.2em;
+}
+
+.container-home p {
+    margin-bottom: 2em;
+}
+
+.container-home .grade-mosaico {
+    display: grid;
+}
+/* 
+.card,
+.card1,
+.card2,
+.card3,
+.card4 {
+    background-image: url(../img/1-_en-_hoscars.jfif);
+    min-height: 14em;
+    background-position: 50%;
+    background-size: cover;
+}
+
+.card1 {
+    grid-area: left;
+}
+
+.card2 {
+    grid-area: wide;
+}
+
+.card3 {
+    grid-area: right;
+}
+
+.card4 {
+    grid-area: square;
+} */
+
+/* .grid-container {
+    display: grid;
+    grid-template-areas: 'wide wide right';
+    grid-gap: 1px;
+}
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin: .25em;
+} */
+/* 
+.form-overlay {
+    position: absolute;
+    top: -.25rem;
+    left: -.5rem;
+    right: -.4375rem;
+    bottom: 5.375rem;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: .25rem;
+} */
+
+.filtros {
+    position: relative;
+    margin: 0 auto;
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "addressFilter addressFilter" "priceFilter usableAreaFilter";
+    background-color: rgba(0, 0, 0, .5);
+    padding: 15px 15px 15px 15px;
+    border-radius: 10px;
+}
+
+@media (min-width:1098px) {
+    .filtros {
+        width: 50%;
+    }
+}
+
+.addressFilter {
+    grid-area: addressFilter;
+    display: flex;
+    align-items: center;
+}
+
+.range-style:first-child {
+    margin-right: 5px;
+}
+
+.range-style:last-child {
+    margin-left: 5px;
+}
+
+.range-style {
+    padding: 0 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #808080;
+}
+
+.priceFilter {
+    grid-area: priceFilter;
+}
+
+.usableAreaFilter {
+    grid-area: usableAreaFilter;
+    padding: 0 25px;
+}
+
+#price {
+    padding: 0 !important;
+}
+
+.input-group:nth-child(2),
+.input-group:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group:nth-child(2)>label,
+.input-group:nth-child(3)>label {
+    align-self: flex-start;
+}
+
+.addressFilter>input {
+
+    flex-grow:20;
+    margin-bottom:10px;
+    margin-right: 10px;
+    padding: 6px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+
+.addressFilter>select {
+    flex-grow:1;
+    padding: 6px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom:10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    margin: 5px;
+    font-size: 22px;
+}
+
+.buttons a {
+    color: #fff;
+    opacity:0.5; 
+    text-decoration: none;
+    margin: 10px;
+}
+
+
+
+.buttons:hover a:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+.input-group > label {
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    align-items: baseline;
+}

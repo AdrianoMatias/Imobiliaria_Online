@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <!-- <link rel="stylesheet" href="css/cardsCSS/bootstrap.css">
+    <link rel="stylesheet" href="css/cardsCSS/bootstrap-grid.css.map">
+    <link rel="stylesheet" href="css/cardsCSS/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/cardsCSS/bootstrap-reboot.css.map">
+    <link rel="stylesheet" href="css/cardsCSS/bootstrap.css.map"> -->
+    <link rel="stylesheet" href="css/cardsCSS//bootstrap.min.css">
+    <link rel="stylesheet" href="css/cardsCSS/card.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>Hostel Ratel</title>
+    
+</head>
+
+<body>
+    
+    <div class="container-header">
+        <div class="overlay"></div>
+        <header class="header">
+            <div class="logo">
+            </div>
+
+            <div class="buttons">
+                
+                    
+        </header>
+        <div class="filtros">
+            <div class="input-group addressFilter">
+                <input type="search" name="address" id="address" list="addressList"
+                    onchange="filterCtrl.filtrar(event)" placeholder="Rua Bandeira Paulista, 594 Itaim Bibi - SP" />
+                <select name="maxValues" id="maxValues" oninput="filterCtrl.filtrar(event)">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+
+            <div class="input-group priceFilter range-style">
+                <label for="price"><span>R$: <span id="priceLabel">0</span></span></label>
+                <input type="range" step="100" name="price" id="price" list="priceList"
+                oninput="filterCtrl.handleLabels(event)"  onchange="filterCtrl.filtrar(event)" />
+                
+            </div>
+            
+
+            <div class="input-group usableAreaFilter range-style">
+                <label for="usableArea"><span>m² <span id="usableAreaLabel">0</span></span> </label>
+                <input  type="range" step="1" name="usableArea" id="usableArea" list="usableAreaList" 
+                   oninput="filterCtrl.handleLabels(event)" onchange="filterCtrl.filtrar(event)">
+            </div>
+        </div>
+        <div class="arrow"></div>
+    </div>
+ 
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Reinvente seu jeito de morar</h1>
+             <p>Alugue ou compre seu imóvel sem drama</p>
+          </div>
+          <div class="col-12">
+            <div id="cardContainer" class="grid-container">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+</body>
+<script src="./js/app/helper/Helper.js"></script>
+<script src="./js/app/models/Card.js"></script>
+<script src="./js/app/models/Filter.js"></script>
+<script src="./js/app/views/View.js"></script>
+<script src="./js/app/views/CardView.js"></script>
+<script src="./js/app/controllers/CardController.js"></script>
+<script src="./js/app/controllers/FilterController.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script>
+    let filterCtrl = new FilterController() 
+</script>
+
+</html>

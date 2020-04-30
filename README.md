@@ -1,4 +1,4 @@
-<h1>Executar o projeto </h1>
+﻿<h1>Executar o projeto </h1>
 
 <ol>
 <li>Tenha o node baixado </li>
